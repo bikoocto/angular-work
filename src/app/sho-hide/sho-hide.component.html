@@ -5,14 +5,15 @@
       <div *ngFor="let lang of langList;let index = index" >
           <div class="engbutton">
               <button class="englishButton" (click)="onclickEnglishDiv(lang,index)">{{ lang }}</button>
-              <div *ngIf="visibleIndex === index" class="knowEnglish">
+
+              <div *ngIf="visibleLang[lang]" class="knowEnglish">
                 <div>
                   <div *ngFor="let data of filteredLangList" class="engDivObj">{{data.name}}</div>
                 </div>
               </div>
             </div>
       </div>
-      <!-- <button (click)="listAccordingTOLang()" class="clickButton">Click</button> -->
+   
    
   
 

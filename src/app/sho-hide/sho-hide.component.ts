@@ -14,6 +14,7 @@ export class ShoHideComponent implements OnInit {
   ListOfLang=[];
   listOfStudent=[];
   count:number=0;
+  visibleLang:any[]=[]
   constructor() { }
   langlistData=[
     {
@@ -157,6 +158,7 @@ export class ShoHideComponent implements OnInit {
     } else {
       this.visibleIndex = index;
     }
+    this.visibleLang[clickLang] = !this.visibleLang[clickLang];
     // if(this.visibleIndex !== index){
     //   this.visibleIndex=index;
     // }
